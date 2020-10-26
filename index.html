@@ -5,28 +5,18 @@
 	<body>
 		<script>
 			function retornaSexo(sexo) {
-				// M, F
-				// Masculino, Feminino
-				if (sexo === 'M'){
-					return ('Masculino');
-				} else if (sexo === 'F'){
-					return ('Feminino');
+				var sexo = 'M';
+
+				if (sexo == 'M') {
+						return 'Masculino';
 				} else {
-					return ('indefinido');
+						return 'Feminino';
 				}
+
+				// reduzido para apenas
+				return (sexo == 'M') ? 'Masculino : 'Feminino';
 			}
 			
-			function retornaSexo(sexo) {
-				switch (sexo) {
-					case 'M':
-						return ('Masculino');
-					case 'F':
-						return ('Feminino');
-					default:
-						return ('indefinido');
-				}
-			}
-
 			var resultado = retornaSexo('M');
 			console.log(resultado);
 		</script>
