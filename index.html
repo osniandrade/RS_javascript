@@ -6,13 +6,23 @@
 
 <body>
   <div id="app">
-    <input type="text" name="nome" id="nome" />
-    <button class="botao">Adicionar</button>
+    <text id="remover">TEXTO REMOVIDO</text>
   </div>
   <script>
-    var inputElement = document.getElementById('nome');
+    var linkElement = document.createElement('a');
 
-    console.log(inputElement);
+    linkElement.setAttribute('href', 'http://www.google.com');
+    linkElement.setAttribute('title', 'Site Google');
+
+    var textElement = document.createTextNode('Acessar Google');
+
+    linkElement.appendChild(textElement);
+
+    var containerElement = document.querySelector('#app');
+    containerElement.appendChild(linkElement);
+
+    var textElement = document.querySelector('#remover');
+    containerElement.removeChild(textElement);
   </script>
 </body>
 
