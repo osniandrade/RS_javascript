@@ -6,24 +6,11 @@
 
 <body>
   <div id="app">
-    <text id="remover">TEXTO REMOVIDO</text>
+    <ul></ul>
+    <input type="text" placeholder="Digite uma tarefa">
+    <button>Adicionar</button>
   </div>
-  <script>
-    var linkElement = document.createElement('a');
-
-    linkElement.setAttribute('href', 'http://www.google.com');
-    linkElement.setAttribute('title', 'Site Google');
-
-    var textElement = document.createTextNode('Acessar Google');
-
-    linkElement.appendChild(textElement);
-
-    var containerElement = document.querySelector('#app');
-    containerElement.appendChild(linkElement);
-
-    var textElement = document.querySelector('#remover');
-    containerElement.removeChild(textElement);
-  </script>
+  <script src="todos.js"></script>
 </body>
 
 </html>
