@@ -1,0 +1,31 @@
+<!-- A partir do seguinte vetor:
+var nomes = ["Diego", "Gabriel", "Lucas"];
+Preencha uma lista (<ul>) no HTML com os itens da seguinte forma:
+● Diego
+● Gabriel
+● Lucas -->
+
+<html>
+    <head>
+        <title>Ex 3</title>
+    </head>
+    <body>
+        <div id="tabela"></div>
+        <script>
+            function printlist(nomes) {
+                var divElement = document.querySelector('#tabela');
+                var ulElement = document.createElement('ul');
+                for (value of nomes) {
+                    var liElement = document.createElement('li');
+                    liElement.appendChild(document.createTextNode(value));
+                    ulElement.appendChild(liElement);
+                }
+                divElement.appendChild(ulElement);
+            }
+
+            var nomes = ["Diego","Gabriel","Lucas"];
+
+            printlist(nomes);
+        </script>
+    </body>
+</html>

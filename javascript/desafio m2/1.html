@@ -1,0 +1,29 @@
+<!-- Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
+vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
+aparecer na tela. -->
+
+<html>
+    <head>
+        <title>Ex 1</title>
+    </head>
+    <body>
+        <button onclick="putbox()" id="butt">
+            <text>PRESS</text>
+        </button>
+        <div id="container">
+
+        </div>
+        <script>
+            function putbox() {
+                var divElement = document.createElement('div');
+                divElement.style.width = 100;
+                divElement.style.height = 100;
+                divElement.style.backgroundColor = '#f00';
+
+                var containerElement = document.querySelector('div#container');
+                containerElement.appendChild(divElement);
+                console.log('bleh');
+            }
+        </script>
+    </body>
+</html>

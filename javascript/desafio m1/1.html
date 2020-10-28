@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Ex 1</title>
+  </head>
+  <body>
+    <script>
+      function printend(endereco) {
+        console.log("O usuario mora em " + endereco.cidade + " / " + endereco.uf + ", no bairro " + endereco.bairro + ", na \"" + endereco.rua + "\" com nº " + endereco.numero);
+      }
+
+      var endereco = {
+        rua: "rua dos pinheiros",
+        numero: 1293,
+        bairro: "Centro",
+        cidade: "São Paulo",
+        uf: "SP"
+      };
+      printend(endereco);
+    </script>
+  </body>
+</html>

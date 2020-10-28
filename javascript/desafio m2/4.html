@@ -1,0 +1,51 @@
+<!-- Seguindo o resultado do exercício anterior adicione um input em tela e um botão como a seguir:
+
+    <input type="text" name="nome">
+    <button onClick="adicionar()">Adicionar</button>
+
+Ao clicar no botão, a função adicionar() deve ser disparada adicionando um novo item a lista de
+nomes baseado no nome preenchido no input e renderizando o novo item em tela juntos aos
+demais itens anteriores. Além disso, o conteúdo do input deve ser apagado após o clique. -->
+
+<html>
+    <head>
+        <title>Ex 4</title>
+    </head>
+    <body>
+        <div id="tabela">
+            <input id="inserttext">
+            <button onclick="adicionar()">Adicionar</button>
+
+        </div>
+        <script>
+            function printlist(nomes) {
+                var divElement = document.querySelector('#tabela');
+                var ulElement = document.createElement('ul');
+                ulElement.setAttribute("id", "lista");
+                for (value of nomes) {
+                    var liElement = document.createElement('li');
+                    liElement.appendChild(document.createTextNode(value));
+                    ulElement.appendChild(liElement);
+                }
+                divElement.appendChild(ulElement);
+            }
+
+            function addToList(nome) {
+                var ulElement = document.querySelector('#lista');
+                var liElement = document.createElement('li');
+                liElement.appendChild(document.createTextNode(nome));
+                ulElement.appendChild(liElement);
+            }
+
+            function adicionar(event) {
+                var nome = document.getElementById("inserttext").value;
+                addToList(nome);
+                document.getElementById("inserttext").value = '';
+            }
+
+            var nomes = ["Diego","Gabriel","Lucas"];
+
+            printlist(nomes);
+        </script>
+    </body>
+</html>

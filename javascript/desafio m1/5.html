@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Ex 5</title>
+    </head>
+    <body>
+        <script>
+            function printfrase(user) {
+                for (var reg of user) {
+                    skills = reg.habilidades.join(', ');
+                    console.log("O " + reg.nome + " possui as habilidades: " + skills);
+                }
+            }
+
+            var usuarios = [
+                {
+                    nome: "Diego",
+                    habilidades: ["Javascript","ReactJS","Redux"]
+                },
+                {
+                    nome: "Gabriel",
+                    habilidades: ["VueJS","Ruby on Rails","Elixir"]
+                }
+            ];
+
+            printfrase(usuarios);
+
+            // O Diego possui as habilidades: Javascript, ReactJS, Redux
+        </script>
+    </body>
+</html>
